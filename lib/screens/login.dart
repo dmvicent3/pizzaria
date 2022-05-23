@@ -12,7 +12,7 @@ class Login extends StatelessWidget {
       backgroundColor: Colors.transparent,
       resizeToAvoidBottomInset: false,
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/sign_in_bg.png"),
             fit: BoxFit.cover,
@@ -32,7 +32,7 @@ class Login extends StatelessWidget {
             ),
           ),
           Container(
-            color: Color.fromARGB(204, 38, 39, 44),
+            color: const Color.fromARGB(204, 38, 39, 44),
             child: Row(children: [
               Expanded(
                 child: Column(children: [
@@ -40,21 +40,7 @@ class Login extends StatelessWidget {
                     Expanded(
                       child: Container(
                         padding: const EdgeInsets.fromLTRB(10, 20, 10, 10),
-                        child: TextField(
-                          style: TextStyle(color: Colors.white),
-                          controller: controller,
-                          decoration: const InputDecoration(
-                              border: OutlineInputBorder(),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: Colors.deepOrange),
-                              ),
-                              labelText: 'Email',
-                              filled: true,
-                              fillColor: Color.fromARGB(255, 38, 39, 44),
-                              hintStyle: TextStyle(color: Colors.white),
-                              labelStyle: TextStyle(color: Colors.white)),
-                        ),
+                        child: Input("Email", false),
                       ),
                     )
                   ]),
@@ -62,22 +48,7 @@ class Login extends StatelessWidget {
                     Expanded(
                       child: Container(
                         padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
-                        child: TextField(
-                          style: TextStyle(color: Colors.white),
-                          controller: passwordController,
-                          obscureText: true,
-                          decoration: const InputDecoration(
-                              border: OutlineInputBorder(),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: Colors.deepOrange),
-                              ),
-                              labelText: 'Password',
-                              filled: true,
-                              fillColor: Color.fromARGB(255, 38, 39, 44),
-                              hintStyle: TextStyle(color: Colors.white),
-                              labelStyle: TextStyle(color: Colors.white)),
-                        ),
+                        child: Input("Password", true),
                       ),
                     )
                   ]),
@@ -90,7 +61,7 @@ class Login extends StatelessWidget {
                           text: TextSpan(children: [
                             TextSpan(
                                 text: 'Forgot password?',
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Colors.blue,
                                 ),
                                 recognizer: TapGestureRecognizer()
@@ -100,7 +71,7 @@ class Login extends StatelessWidget {
                       ),
                     )
                   ]),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(
                     children: [
                       Expanded(
@@ -119,7 +90,7 @@ class Login extends StatelessWidget {
                               ))),
                     ],
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Row(children: [
                     Expanded(
                         child: Container(
@@ -137,7 +108,7 @@ class Login extends StatelessWidget {
                       ),
                     ))
                   ]),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(children: [
                     Expanded(
                         child: Container(
@@ -155,7 +126,7 @@ class Login extends StatelessWidget {
                       ),
                     ))
                   ]),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                 ]),
               )
             ]),
@@ -184,4 +155,31 @@ class Login extends StatelessWidget {
           ),
         ]),
       ));
+}
+
+class Input extends StatelessWidget {
+  @override
+  Input(this.label, this.isPassword);
+
+  String label;
+  TextEditingController controller = TextEditingController();
+  bool isPassword = false;
+
+  Widget build(BuildContext context) {
+    return TextField(
+      style: TextStyle(color: Colors.white),
+      controller: controller,
+      obscureText: this.isPassword,
+      decoration: InputDecoration(
+          border: OutlineInputBorder(),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.deepOrange),
+          ),
+          labelText: this.label,
+          filled: true,
+          fillColor: Color.fromARGB(255, 38, 39, 44),
+          hintStyle: TextStyle(color: Colors.white),
+          labelStyle: TextStyle(color: Colors.white)),
+    );
+  }
 }
