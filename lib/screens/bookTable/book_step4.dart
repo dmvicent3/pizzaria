@@ -21,7 +21,7 @@ class BookStep4 extends StatelessWidget {
           LinearProgressIndicator(
             backgroundColor: Colors.grey,
             //color: Colors.deepOrangeAccent,
-            value: 0.75,
+            value: 1,
             semanticsLabel: 'Linear progress indicator',
             minHeight: 8,
           ),
@@ -29,7 +29,7 @@ class BookStep4 extends StatelessWidget {
             alignment: Alignment.center,
             padding: const EdgeInsets.all(10),
             child: const Text(
-              'Your order',
+              'Payment Method',
               style: TextStyle(
                   //color: Colors.white,
                   fontWeight: FontWeight.w500,
@@ -37,15 +37,23 @@ class BookStep4 extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 20),
+          const Text(
+              'Total: 11.68€',
+              style: TextStyle(
+                  //color: Colors.white,
+                  fontWeight: FontWeight.w300,
+                  fontSize: 28),
+            ),
+            const SizedBox(height: 20),
           Card(
             child: ListTile(
               leading: Icon(
                 Icons.account_circle,
-                size: 60,
+                size: 50,
               ),
-              title: Text('M Pizza 1, no tomato'),
-              subtitle: Text('8.50€', style: TextStyle(fontSize: 16)),
-              trailing: Icon(Icons.close),
+              title: Text('Visa'),
+              //subtitle: Text('8.50€', style: TextStyle(fontSize: 16)),
+              trailing: Icon(Icons.arrow_right),
               //isThreeLine: true,
             ),
           ),
@@ -53,37 +61,60 @@ class BookStep4 extends StatelessWidget {
             child: ListTile(
               leading: Icon(
                 Icons.account_circle,
-                size: 60,
+                size: 50,
               ),
-              title: Text('Drink 1 x2'),
-              subtitle: Text('3.18€', style: TextStyle(fontSize: 16)),
-              trailing: Icon(Icons.close),
+              title: Text('Mastercard'),
+              //subtitle: Text('3.18€', style: TextStyle(fontSize: 16)),
+              trailing: Icon(Icons.arrow_right),
               //isThreeLine: true,
             ),
           ),
           Card(
             child: ListTile(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => BookStep4()),
-                  );
-                },
-                leading: Icon(
-                  Icons.add,
-                  size: 60,
-                  //color: Colors.deepOrange,
-                ),
-                title: Text('Add an item'),
-                // subtitle: Text('Here is a second line'),
-                trailing: Icon(Icons.arrow_right)),
+              leading: Icon(
+                Icons.account_circle,
+                size: 50,
+              ),
+              title: Text('Paypal'),
+              //subtitle: Text('3.18€', style: TextStyle(fontSize: 16)),
+              trailing: Icon(Icons.arrow_right),
+              //isThreeLine: true,
+            ),
           ),
+          Card(
+            child: ListTile(
+              leading: Icon(
+                Icons.account_circle,
+                size: 50,
+              ),
+              title: Text('MB Way'),
+              //subtitle: Text('3.18€', style: TextStyle(fontSize: 16)),
+              trailing: Icon(Icons.arrow_right),
+              //isThreeLine: true,
+            ),
+          ),
+          
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Row(
-                  children: [],
+                  children: [
+                    Expanded(
+                        child: Container(
+                            height: 50,
+                            padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                            child: ElevatedButton(
+                              child: const Text('FINALIZE'),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => BookSucess()),
+                                );
+                              },
+                            ))),
+                  ],
                 )
               ],
             ),

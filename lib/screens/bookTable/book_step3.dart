@@ -43,7 +43,7 @@ class BookStep3 extends StatelessWidget {
             child: ListTile(
               leading: Icon(
                 Icons.account_circle,
-                size: 60,
+                size: 50,
               ),
               title: Text('M Pizza 1, no tomato'),
               subtitle: Text('8.50€', style: TextStyle(fontSize: 16)),
@@ -55,7 +55,7 @@ class BookStep3 extends StatelessWidget {
             child: ListTile(
               leading: Icon(
                 Icons.account_circle,
-                size: 60,
+                size: 50,
               ),
               title: Text('Drink 1 x2'),
               subtitle: Text('3.18€', style: TextStyle(fontSize: 16)),
@@ -73,7 +73,7 @@ class BookStep3 extends StatelessWidget {
                 },
                 leading: Icon(
                   Icons.add,
-                  size: 60,
+                  size: 50,
                   //color: Colors.deepOrange,
                 ),
                 title: Text('Add an item'),
