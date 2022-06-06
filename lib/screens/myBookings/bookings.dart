@@ -21,13 +21,7 @@ class Bookings extends StatelessWidget {
           ),
         ),*/
         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-          LinearProgressIndicator(
-            backgroundColor: Colors.grey,
-            //color: Colors.deepOrangeAccent,
-            value: 0.75,
-            semanticsLabel: 'Linear progress indicator',
-            minHeight: 8,
-          ),
+       
           Container(
             alignment: Alignment.center,
             padding: const EdgeInsets.all(10),

@@ -21,18 +21,11 @@ class Orders extends StatelessWidget {
           ),
         ),*/
         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-          LinearProgressIndicator(
-            backgroundColor: Colors.grey,
-            //color: Colors.deepOrangeAccent,
-            value: 0.75,
-            semanticsLabel: 'Linear progress indicator',
-            minHeight: 8,
-          ),
           Container(
             alignment: Alignment.center,
             padding: const EdgeInsets.all(10),
             child: const Text(
-              'Your Orders',
+              'Your Bookings',
               style: TextStyle(
                 //color: Colors.white,
                   fontWeight: FontWeight.w500,
