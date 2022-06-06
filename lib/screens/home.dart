@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pizzaria/screens/bookTable/book_step1.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:pizzaria/screens/orderDelivery/order_step1.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -166,7 +167,7 @@ class Home extends StatelessWidget {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => Home()),
+                                MaterialPageRoute(builder: (context) => OrderStep1()),
                               );
                             },
                             child: Container(

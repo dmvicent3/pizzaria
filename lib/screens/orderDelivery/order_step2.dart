@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pizzaria/screens/bookTable/book_step2.dart';
 import 'package:intl/intl.dart';
+import 'package:pizzaria/screens/orderDelivery/order_step3.dart';
 
-class BookStep1 extends StatelessWidget {
+class OrderStep2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
       resizeToAvoidBottomInset: false,
@@ -14,7 +15,7 @@ class BookStep1 extends StatelessWidget {
           LinearProgressIndicator(
             backgroundColor: Colors.grey,
             //color: Colors.deepOrangeAccent,
-            value: 0.25,
+            value: 0.5,
             semanticsLabel: 'Linear progress indicator',
             minHeight: 8,
           ),
@@ -24,7 +25,7 @@ class BookStep1 extends StatelessWidget {
             child: const Text(
               'Set Date and Time',
               style: TextStyle(
-                  //color: Colors.white,
+                //color: Colors.white,
                   fontWeight: FontWeight.w500,
                   fontSize: 40),
             ),
@@ -35,20 +36,20 @@ class BookStep1 extends StatelessWidget {
             child: Row(children: [
               Expanded(
                   child: Column(children: [
-                Row(children: [
-                  Expanded(
-                      child: Container(
-                          padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
-                          child: DatePicker()))
-                ]),
-                Row(children: [
-                  Expanded(
-                      child: Container(
-                          padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
-                          child: TimePicker()))
-                ]),
-                const SizedBox(height: 20),
-              ]))
+                    Row(children: [
+                      Expanded(
+                          child: Container(
+                              padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+                              child: DatePicker()))
+                    ]),
+                    Row(children: [
+                      Expanded(
+                          child: Container(
+                              padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+                              child: TimePicker()))
+                    ]),
+                    const SizedBox(height: 20),
+                  ]))
             ]),
           ),
           const SizedBox(height: 20),
@@ -68,7 +69,7 @@ class BookStep1 extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => BookStep2()),
+                                      builder: (context) => OrderStep3()),
                                 );
                               },
                             ))),
@@ -106,7 +107,7 @@ class _DatePicker extends State<DatePicker> {
       decoration: const InputDecoration(
           icon: Icon(Icons.calendar_today), //icon of text field
           labelText: "Enter Date" //label text of field
-          ),
+      ),
       readOnly: true, //set it true, so that user will not able to edit text
       onTap: () async {
         DateTime? pickedDate = await showDatePicker(
@@ -160,7 +161,7 @@ class _TimePicker extends State<TimePicker> {
       decoration: const InputDecoration(
           icon: Icon(Icons.timer), //icon of text field
           labelText: "Enter Time" //label text of field
-          ),
+      ),
       readOnly: true, //set it true, so that user will not able to edit text
       onTap: () async {
         TimeOfDay? pickedTime = await showTimePicker(
@@ -171,7 +172,7 @@ class _TimePicker extends State<TimePicker> {
         if (pickedTime != null) {
           print(pickedTime.format(context)); //output 10:51 PM
           DateTime parsedTime =
-              DateFormat.jm().parse(pickedTime.format(context).toString());
+          DateFormat.jm().parse(pickedTime.format(context).toString());
           //converting to DateTime so that we can further format on different pattern.
           print(parsedTime); //output 1970-01-01 22:53:00.000
           String formattedTime = DateFormat('HH:mm:ss').format(parsedTime);
