@@ -14,12 +14,14 @@ class Home extends StatelessWidget {
         ),
       ),
       home: Scaffold(
+
         backgroundColor: Colors.transparent,
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
           title: const Text("Pizzaria"),
         ),
         drawer: Drawer(
+
           child: ListView(
             padding: EdgeInsets.zero,
             children: [
@@ -85,12 +87,7 @@ class Home extends StatelessWidget {
           ),
         ),
         body: Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage("assets/images/sign_in_bg.png"),
-                fit: BoxFit.cover,
-              ),
-            ),
+           color: Colors.deepOrange,
             child: Column(children: [
               Stack(children: [
                 Carousel(),
@@ -140,7 +137,7 @@ class Home extends StatelessWidget {
                             },
                             child: Container(
                                 padding:
-                                    const EdgeInsets.fromLTRB(10, 10, 10, 10),
+                                    const EdgeInsets.fromLTRB(5, 5, 5, 5),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: const [
@@ -155,8 +152,7 @@ class Home extends StatelessWidget {
                                 height: 143,
                                 decoration: const BoxDecoration(
                                   image: DecorationImage(
-                                    image: AssetImage(
-                                        "assets/images/sign_in_bg.png"),
+                                    image: AssetImage("images/book.png"),
                                     fit: BoxFit.cover,
                                   ),
                                 )),
@@ -172,7 +168,7 @@ class Home extends StatelessWidget {
                             },
                             child: Container(
                                 padding:
-                                    const EdgeInsets.fromLTRB(10, 10, 10, 10),
+                                const EdgeInsets.fromLTRB(5,5,5,5),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: const [
@@ -185,10 +181,11 @@ class Home extends StatelessWidget {
                                 ),
                                 width: (height / 2) - 20,
                                 height: 143,
+
                                 decoration: const BoxDecoration(
                                   image: DecorationImage(
                                     image: AssetImage(
-                                        "assets/images/sign_in_bg.png"),
+                                        "images/order.png"),
                                     fit: BoxFit.cover,
                                   ),
                                 )),
@@ -209,7 +206,7 @@ class Home extends StatelessWidget {
                             },
                             child: Container(
                                 padding:
-                                    const EdgeInsets.fromLTRB(10, 10, 10, 10),
+                                    const EdgeInsets.fromLTRB(5, 5, 5, 5),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: const [
@@ -225,7 +222,7 @@ class Home extends StatelessWidget {
                                 decoration: const BoxDecoration(
                                   image: DecorationImage(
                                     image: AssetImage(
-                                        "assets/images/sign_in_bg.png"),
+                                        "images/bookings.png"),
                                     fit: BoxFit.cover,
                                   ),
                                 )),
@@ -241,7 +238,7 @@ class Home extends StatelessWidget {
                             },
                             child: Container(
                                 padding:
-                                    const EdgeInsets.fromLTRB(10, 10, 10, 10),
+                                    const EdgeInsets.fromLTRB(5, 5, 5, 5),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: const [
@@ -256,8 +253,7 @@ class Home extends StatelessWidget {
                                 height: 143,
                                 decoration: const BoxDecoration(
                                   image: DecorationImage(
-                                    image: AssetImage(
-                                        "assets/images/sign_in_bg.png"),
+                                    image: AssetImage("images/orders.png"),
                                     fit: BoxFit.cover,
                                   ),
                                 )),
@@ -343,8 +339,8 @@ class _CarouselState extends State<Carousel> {
 }
 
 final List<String> imgList = [
-  'https://images.unsplash.com/photo-1586882829491-b81178aa622e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80',
-  'https://images.unsplash.com/photo-1586871608370-4adee64d1794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2862&q=80',
-  'https://images.unsplash.com/photo-1586901533048-0e856dff2c0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
-  'https://images.unsplash.com/photo-1586902279476-3244d8d18285?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80',
+  'https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2862&q=80',
+  'https://images.unsplash.com/photo-1590947132387-155cc02f3212?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2862&q=80',
+  'https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2862&q=80',
+  'https://images.unsplash.com/photo-1581873372796-635b67ca2008?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2862&q=80',
 ];
