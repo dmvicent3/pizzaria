@@ -96,8 +96,8 @@ class OrderStep1 extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
                       child: TextField(
                           keyboardType: TextInputType.multiline,
-                          minLines: 5,
-                          maxLines: 6,
+                          minLines: 2,
+                          maxLines: 2,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             hintText: 'Delivery note/Instructions',
