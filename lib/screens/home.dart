@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pizzaria/screens/Menu/menu_inicial.dart';
 import 'package:pizzaria/screens/bookTable/book_step1.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:pizzaria/screens/myBookings/bookings.dart';
@@ -110,7 +111,7 @@ class Home extends StatelessWidget {
                                         Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                              builder: (context) => Home()),
+                                              builder: (context) => MenuInicial()),
                                         );
                                       },
                                     ))),
