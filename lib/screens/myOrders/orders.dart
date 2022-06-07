@@ -25,7 +25,7 @@ class Orders extends StatelessWidget {
             alignment: Alignment.center,
             padding: const EdgeInsets.all(10),
             child: const Text(
-              'Your Bookings',
+              'Your Orders',
               style: TextStyle(
                 //color: Colors.white,
                   fontWeight: FontWeight.w500,
