@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pizzaria/screens/Menu/menu_inicial.dart';
 import 'package:pizzaria/screens/bookTable/book_step1.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:pizzaria/screens/login.dart';
 import 'package:pizzaria/screens/myBookings/bookings.dart';
 import 'package:pizzaria/screens/myOrders/orders.dart';
 import 'package:pizzaria/screens/orderDelivery/order_step1.dart';
@@ -71,7 +72,7 @@ class Home extends StatelessWidget {
               ListTile(
                 title: const Text('Settings'),
                 onTap: () {
-                  Navigator.pop(context);
+                  builder: (context) => Login();
                 },
               ),
               ListTile(
@@ -144,19 +145,23 @@ class Home extends StatelessWidget {
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: const [
-                                    Text("Book a Table",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.w600))
+
                                   ],
                                 ),
                                 width: (height / 2) - 20,
                                 height: 143,
-                                decoration: const BoxDecoration(
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  border: Border.all(color: Colors.black),
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(20.0),
+                                    topRight: Radius.circular(20.0),
+                                    bottomLeft: Radius.circular(20.0),
+                                    bottomRight: Radius.circular(20.0),
+                                  ),
                                   image: DecorationImage(
                                     image: AssetImage("images/book.png"),
-                                    fit: BoxFit.cover,
+                                    fit: BoxFit.contain,
                                   ),
                                 )),
                           )
@@ -175,28 +180,34 @@ class Home extends StatelessWidget {
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: const [
-                                    Text("Order Delivery",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.w600))
+
                                   ],
                                 ),
                                 width: (height / 2) - 20,
                                 height: 143,
 
-                                decoration: const BoxDecoration(
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  border: Border.all(color: Colors.black),
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(20.0),
+                                    topRight: Radius.circular(20.0),
+                                    bottomLeft: Radius.circular(20.0),
+                                    bottomRight: Radius.circular(20.0),
+                                  ),
                                   image: DecorationImage(
                                     image: AssetImage(
                                         "images/order.png"),
-                                    fit: BoxFit.cover,
+                                    fit: BoxFit.contain,
                                   ),
                                 )),
+
                           )
                         ]),
                       ]),
                   SizedBox(height: 20),
                   Row(
+
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Stack(children: [
@@ -213,20 +224,25 @@ class Home extends StatelessWidget {
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: const [
-                                    Text("My bookings",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.w600))
+
                                   ],
                                 ),
                                 width: (height / 2) - 20,
                                 height: 143,
-                                decoration: const BoxDecoration(
+
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                      border: Border.all(color: Colors.black),
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(20.0),
+                                    topRight: Radius.circular(20.0),
+                                    bottomLeft: Radius.circular(20.0),
+                                    bottomRight: Radius.circular(20.0),
+                                  ),
                                   image: DecorationImage(
                                     image: AssetImage(
                                         "images/bookings.png"),
-                                    fit: BoxFit.cover,
+                                    fit: BoxFit.contain,
                                   ),
                                 )),
                           )
@@ -245,19 +261,23 @@ class Home extends StatelessWidget {
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: const [
-                                    Text("My Orders",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.w600))
+
                                   ],
                                 ),
                                 width: (height / 2) - 20,
                                 height: 143,
-                                decoration: const BoxDecoration(
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  border: Border.all(color: Colors.black),
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(20.0),
+                                    topRight: Radius.circular(20.0),
+                                    bottomLeft: Radius.circular(20.0),
+                                    bottomRight: Radius.circular(20.0),
+                                  ),
                                   image: DecorationImage(
                                     image: AssetImage("images/orders.png"),
-                                    fit: BoxFit.cover,
+                                    fit: BoxFit.contain,
                                   ),
                                 )),
                           )
